@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Tienda Tech - Mercado Libre Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <h1>Mi Tienda Tech</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos, marcas y más..." />
+          <button type="submit">🔍</button>
+        </div>
+        <div class="nav-user">
+          <a href="registro.html">Creá tu cuenta</a>
+          <a href="login.html">Ingresá</a>
+          <a href="compras.html">Mis compras</a>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+        </div>
+        <div class="nav-links">
+          <a href="carrito.html">🛒 Carrito (<span id="contador">0</span>)</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Full width carousel -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div
+          class="carousel-slide"
+          style="background-image: url(&quot;img/banner.png&quot;)"
+        >
+          <div class="carousel-content">
+            <h2>3/3<br />FECHAS DOBLES</h2>
+            <p>Ver TyC: www.mitiendatech.com/ofertas</p>
+          </div>
+          <div class="carousel-content-right">
+            <div class="discount-badge">
+              <span>HASTA</span>
+              <strong>50% DCTO</strong>
+            </div>
+            <div class="installments-badge">
+              <span>HASTA <strong>12</strong> CUOTAS</span>
+              <span class="small">0% INTERÉS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <main class="main-container">
+      <section class="home-categories">
+        <a href="productos.html" class="category-card">
+          <h4>Llévate tu favorito</h4>
+          <img
+            src="img/monitor_1772482781905.png"
+            alt="Monitor"
+            class="cat-img-box"
+          />
+          <p class="cat-desc">Monitores Gamers y más</p>
+        </a>
+        <a href="productos.html" class="category-card">
+          <h4>Porque te interesa</h4>
+          <img
+            src="img/laptop_1772482670018.png"
+            alt="Laptop"
+            class="cat-img-box"
+          />
+          <p class="cat-desc">Laptops de última gen</p>
+        </a>
+        <a href="productos.html" class="category-card">
+          <h4>Lo quieres</h4>
+          <img
+            src="img/mouse_1772482716987.png"
+            alt="Mouse"
+            class="cat-img-box"
+          />
+          <p class="cat-desc">Accesorios Gamer Premium</p>
+        </a>
+        <a href="productos.html" class="category-card">
+          <h4>Visto recientemente</h4>
+          <img
+            src="img/teclado_1772482765270.png"
+            alt="Teclado"
+            class="cat-img-box"
+          />
+          <p class="cat-desc">Teclados Mecánicos RGB</p>
+        </a>
+        <a href="#" class="category-card ad-card">
+          <img
+            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=250&h=300"
+            alt="Ad"
+            class="full-img"
+          />
+        </a>
+        <div class="category-card payment-card">
+          <h4>Medios de pago</h4>
+          <div class="payment-icon">💳</div>
+          <p class="cat-desc">Paga tus compras de forma rápida y segura.</p>
+        </div>
+      </section>
+
+      <section class="ofertas-section" style="margin-top: 40px">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 20px;
+          "
+        >
+          <h2 style="font-size: 24px; font-weight: 300; margin: 0">
+            Ofertas del día
+          </h2>
+          <a
+            href="productos.html"
+            style="color: #3483fa; text-decoration: none; font-size: 14px"
+            >Ver todas</a
+          >
+        </div>
+
+        <div class="productos">
+          <div class="card">
+            <img
+              class="card-img"
+              src="img/laptop_1772482670018.png"
+              alt="Laptop"
+            />
+            <div class="card-info">
+              <h3 title="Laptop Master 5000">
+                Laptop Master 5000 16GB RAM 512GB SSD
+              </h3>
+              <p class="price">
+                $ 2.250
+                <span style="font-size: 14px; color: #00a650; margin-left: 5px"
+                  >10% OFF</span
+                >
+              </p>
+              <p class="free-shipping">Llega gratis mañana</p>
+              <button class="btn-add" onclick="agregarProducto('Laptop', 2250)">
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-img"
+              src="img/monitor_1772482781905.png"
+              alt="Monitor 24 pulgadas"
+            />
+            <div class="card-info">
+              <h3 title="Monitor 24 pulgadas FHD 144Hz">
+                Monitor 24 pulgadas FHD 144Hz 1ms IPS
+              </h3>
+              <p class="price">
+                $ 765
+                <span style="font-size: 14px; color: #00a650; margin-left: 5px"
+                  >15% OFF</span
+                >
+              </p>
+              <p class="free-shipping">Llega gratis mañana</p>
+              <button
+                class="btn-add"
+                onclick="agregarProducto('Monitor 24', 765)"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-img"
+              src="img/audifonos_1772482807732.png"
+              alt="Audífonos Bluetooth"
+            />
+            <div class="card-info">
+              <h3 title="Audífonos Bluetooth Over-ear">
+                Audífonos Bluetooth Over-ear Cancelación de ruido
+              </h3>
+              <p class="price">
+                $ 200
+                <span style="font-size: 14px; color: #00a650; margin-left: 5px"
+                  >20% OFF</span
+                >
+              </p>
+              <p class="free-shipping">Llega gratis hoy</p>
+              <button
+                class="btn-add"
+                onclick="agregarProducto('Audífonos Bluetooth', 200)"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=400&h=400"
+              alt="Smartwatch"
+            />
+            <div class="card-info">
+              <h3 title="Smartwatch Deportivo">
+                Smartwatch Deportivo Series 8 GPS
+              </h3>
+              <p class="price">
+                $ 180
+                <span style="font-size: 14px; color: #00a650; margin-left: 5px"
+                  >5% OFF</span
+                >
+              </p>
+              <p class="free-shipping">Llega gratis hoy</p>
+              <button
+                class="btn-add"
+                onclick="agregarProducto('Smartwatch Deportivo', 180)"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Botón flotante de WhatsApp para atención al cliente -->
+    <a
+      href="https://wa.me/5491100000000?text=Hola,%20tengo%20una%20consulta"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        class="whatsapp-icon"
+      />
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

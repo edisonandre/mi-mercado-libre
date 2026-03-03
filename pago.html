@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medio de Pago - Mi Tienda Tech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <header class="auth-header">
+      <div class="header-top auth-header-top">
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >Mi Tienda Tech</a
+          >
+        </h1>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <div class="auth-card" style="max-width: 500px">
+        <h2>Ingresa los datos de tu tarjeta</h2>
+        <form
+          onsubmit="
+            event.preventDefault();
+            alert('¡Pago procesado con éxito!');
+            window.location.href = 'index.html';
+          "
+        >
+          <div class="input-group">
+            <label for="cardNumber">Número de tarjeta</label>
+            <input
+              type="text"
+              id="cardNumber"
+              placeholder="0000 0000 0000 0000"
+              maxlength="19"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="cardName">Nombre y apellido del titular</label>
+            <input
+              type="text"
+              id="cardName"
+              placeholder="Como aparece en la tarjeta"
+              required
+            />
+          </div>
+          <div style="display: flex; gap: 15px">
+            <div class="input-group" style="flex: 1">
+              <label for="cardExpiry">Vencimiento</label>
+              <input
+                type="text"
+                id="cardExpiry"
+                placeholder="MM/AA"
+                maxlength="5"
+                required
+              />
+            </div>
+            <div class="input-group" style="flex: 1">
+              <label for="cardCvv">Código de seguridad</label>
+              <input
+                type="password"
+                id="cardCvv"
+                placeholder="CVV"
+                maxlength="4"
+                required
+              />
+            </div>
+          </div>
+          <!-- Resumen order sum -->
+          <div
+            style="
+              margin: 20px 0;
+              border-top: 1px solid #eee;
+              padding-top: 20px;
+            "
+          >
+            <p
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-weight: 600;
+                font-size: 18px;
+              "
+            >
+              Total a pagar <span id="paymentTotal">$0</span>
+            </p>
+          </div>
+          <button
+            type="submit"
+            class="btn-primary"
+            style="background-color: #00a650; margin-top: 10px"
+          >
+            Continuar
+          </button>
+        </form>
+        <div class="auth-links">
+          <a href="carrito.html">Volver al carrito</a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        let total = carrito.reduce(
+          (sum, item) => sum + item.precio * item.cantidad,
+          0,
+        );
+        document.getElementById("paymentTotal").innerText = "$" + total;
+      });
+    </script>
+  </body>
+</html>

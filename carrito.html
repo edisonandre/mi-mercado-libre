@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito - Mi Tienda Tech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >Mi Tienda Tech</a
+          >
+        </h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos, marcas y más..." />
+          <button type="submit">🔍</button>
+        </div>
+        <div class="nav-user">
+          <a href="registro.html">Creá tu cuenta</a>
+          <a href="login.html">Ingresá</a>
+          <a href="compras.html">Mis compras</a>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+        </div>
+        <div class="nav-links">
+          <a href="carrito.html">🛒 Carrito (<span id="contador">0</span>)</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="cart-container">
+        <h2 style="margin-top: 0; font-weight: 500">Tu carrito</h2>
+
+        <div id="listaCarrito">
+          <!-- Aquí se inyectan los productos -->
+        </div>
+
+        <div class="cart-total" id="totalContainer" style="display: none">
+          Total: $<span id="total">0</span>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+          "
+        >
+          <button class="btn-empty" onclick="vaciarCarrito()">
+            Vaciar carrito
+          </button>
+          <div style="display: flex; gap: 10px">
+            <button
+              class="btn-primary"
+              style="width: auto; padding: 10px 20px"
+              onclick="enviarPedidoWhatsApp()"
+            >
+              Enviar por WhatsApp
+            </button>
+            <a
+              href="pago.html"
+              class="btn-primary"
+              style="
+                width: auto;
+                padding: 10px 20px;
+                text-decoration: none;
+                text-align: center;
+                background-color: #00a650;
+              "
+              >Procesar Compra</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

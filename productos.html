@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - Mi Tienda Tech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >Mi Tienda Tech</a
+          >
+        </h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos, marcas y más..." />
+          <button type="submit">🔍</button>
+        </div>
+        <div class="nav-user">
+          <a href="registro.html">Creá tu cuenta</a>
+          <a href="login.html">Ingresá</a>
+          <a href="compras.html">Mis compras</a>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+        </div>
+        <div class="nav-links">
+          <a href="carrito.html">🛒 Carrito (<span id="contador">0</span>)</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <section class="productos">
+        <div class="card">
+          <img
+            class="card-img"
+            src="img/laptop_1772482670018.png"
+            alt="Laptop"
+          />
+          <div class="card-info">
+            <h3 title="Laptop Master 5000">
+              Laptop Master 5000 16GB RAM 512GB SSD
+            </h3>
+            <p class="price">$ 2.500</p>
+            <p class="free-shipping">Llega gratis mañana</p>
+            <button class="btn-add" onclick="agregarProducto('Laptop', 2500)">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-img"
+            src="img/mouse_1772482716987.png"
+            alt="Mouse Gamer"
+          />
+          <div class="card-info">
+            <h3 title="Mouse Gamer FPS Pro">
+              Mouse Gamer FPS Pro RGB 16000 DPI
+            </h3>
+            <p class="price">$ 120</p>
+            <p class="free-shipping">Llega gratis mañana</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Mouse Gamer', 120)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-img"
+            src="img/teclado_1772482765270.png"
+            alt="Teclado Mecánico"
+          />
+          <div class="card-info">
+            <h3 title="Teclado Mecánico Retroiluminado">
+              Teclado Mecánico Retroiluminado Switches Blue RGB
+            </h3>
+            <p class="price">$ 300</p>
+            <p class="free-shipping">Llega gratis hoy</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Teclado Mecánico', 300)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-img"
+            src="img/monitor_1772482781905.png"
+            alt="Monitor 24 pulgadas"
+          />
+          <div class="card-info">
+            <h3 title="Monitor 24 pulgadas FHD 144Hz">
+              Monitor 24 pulgadas FHD 144Hz 1ms IPS
+            </h3>
+            <p class="price">$ 900</p>
+            <p class="free-shipping">Llega gratis mañana</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Monitor 24', 900)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-img"
+            src="img/audifonos_1772482807732.png"
+            alt="Audífonos Bluetooth"
+          />
+          <div class="card-info">
+            <h3 title="Audífonos Bluetooth Over-ear">
+              Audífonos Bluetooth Over-ear Cancelación de ruido
+            </h3>
+            <p class="price">$ 250</p>
+            <p class="free-shipping">Llega gratis hoy</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Audífonos Bluetooth', 250)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <!-- Nuevos Productos Adicionales -->
+        <div class="card">
+          <img
+            class="card-img"
+            src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=400&h=400"
+            alt="Smartwatch"
+          />
+          <div class="card-info">
+            <h3 title="Smartwatch Deportivo">
+              Smartwatch Deportivo Series 8 GPS Water Resist
+            </h3>
+            <p class="price">$ 180</p>
+            <p class="free-shipping">Llega gratis por ser nivel 6</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Smartwatch Deportivo', 180)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-img"
+            src="https://images.unsplash.com/photo-1600003014608-c290196c0d60?auto=format&fit=crop&q=80&w=400&h=400"
+            alt="Silla Gamer"
+          />
+          <div class="card-info">
+            <h3 title="Silla Gamer Ergonómica">
+              Silla Gamer Ergonómica Sillón Reclinable RGB
+            </h3>
+            <p class="price">$ 450</p>
+            <p class="free-shipping">Envío gratis</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Silla Gamer', 450)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-img"
+            src="https://images.unsplash.com/photo-1550009158-9effb6ce170c?auto=format&fit=crop&q=80&w=400&h=400"
+            alt="Micrófono"
+          />
+          <div class="card-info">
+            <h3 title="Micrófono Condensador">
+              Micrófono Condensador USB Streaming Podcast
+            </h3>
+            <p class="price">$ 85</p>
+            <p class="free-shipping">Llega gratis mañana</p>
+            <button
+              class="btn-add"
+              onclick="agregarProducto('Micrófono Streaming', 85)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

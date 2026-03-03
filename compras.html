@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Compras - Mi Tienda Tech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >Mi Tienda Tech</a
+          >
+        </h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos, marcas y más..." />
+          <button type="submit">🔍</button>
+        </div>
+        <div class="nav-user">
+          <a href="registro.html">Creá tu cuenta</a>
+          <a href="login.html">Ingresá</a>
+          <a href="compras.html">Mis compras</a>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+        </div>
+        <div class="nav-links">
+          <a href="carrito.html">🛒 Carrito (<span id="contador">0</span>)</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h2 style="font-weight: 400; margin-bottom: 20px">Mis compras</h2>
+
+      <div class="purchases-list">
+        <!-- Ejemplo de compra vacía o pasada -->
+        <div
+          class="purchase-card"
+          style="
+            background: white;
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+          "
+        >
+          <div style="flex: 1; text-align: center; padding: 40px; color: #666">
+            <p style="font-size: 18px; margin-bottom: 10px">
+              Aún no tienes compras.
+            </p>
+            <a
+              href="productos.html"
+              class="btn-primary"
+              style="
+                display: inline-block;
+                width: auto;
+                padding: 10px 20px;
+                text-decoration: none;
+              "
+              >Descubrir productos</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
