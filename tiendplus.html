@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Subscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f3f4f7, #e2e8f0);
+            color: #333;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+        .testimonials {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .statistic {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .feature {
+            margin-bottom: 10px;
+        }
+        @media (min-width: 768px) {
+            .pricing-card {
+                width: 30%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Premium Subscription</h1>
+        <p>Join our premium plan for exclusive benefits!</p>
+    </header>
+    <div class="container">
+        <section class="pricing">
+            <h2>Our Pricing Plans</h2>
+            <div class="pricing-card">
+                <h3>Basic Plan</h3>
+                <p>$10/month</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Access to exclusive content</li>
+                    <li>30% off on all products</li>
+                </ul>
+                <button>Subscribe Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Standard Plan</h3>
+                <p>$20/month</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>All Basic features</li>
+                    <li>Dedicated support</li>
+                    <li>Free shipping on orders</li>
+                </ul>
+                <button>Subscribe Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium Plan</h3>
+                <p>$30/month</p>
+                <h4>Features:</h4>
+                <ul>
+                    <li>All Standard features</li>
+                    <li>Monthly exclusive products</li>
+                    <li>1-on-1 consultations</li>
+                </ul>
+                <button>Subscribe Now</button>
+            </div>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <p>"This service has transformed my shopping experience!" - Customer A</p>
+            <p>"I love the premium content and offers!" - Customer B</p>
+        </section>
+        <section class="statistics">
+            <h2>Our Achievements</h2>
+            <div class="statistic">
+                <div>
+                    <h3>100k+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div>
+                    <h3>150+</h3>
+                    <p>Products Offered</p>
+                </div>
+                <div>
+                    <h3>95%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
