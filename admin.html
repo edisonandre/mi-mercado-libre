@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Manage Products</a></li>
+                <li><a href="#">Create New Product</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-management">
+            <h2>Product Management</h2>
+            <button onclick="createProduct()">Create New Product</button>
+            <div id="product-list">
+                <!-- Product list will be populated here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Your Company</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
