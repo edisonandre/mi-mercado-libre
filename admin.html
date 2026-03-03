@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Admin Dashboard</title>
 </head>
 <body>
     <header>
         <h1>Admin Dashboard</h1>
         <nav>
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Manage Products</a></li>
-                <li><a href="#">Create New Product</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#products">Product Management</a></li>
+                <li><a href="#sellers">Seller Management</a></li>
+                <li><a href="#tiend">Tiend+</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="product-management">
+        <section id="analytics">
+            <h2>Real-Time Analytics</h2>
+            <div class="analytics-container">
+                <!-- Real-time analytics cards go here -->
+            </div>
+        </section>
+        <section id="products">
             <h2>Product Management</h2>
-            <button onclick="createProduct()">Create New Product</button>
-            <div id="product-list">
-                <!-- Product list will be populated here -->
+            <div class="product-manager">
+                <!-- Product management tools go here -->
+            </div>
+        </section>
+        <section id="sellers">
+            <h2>Seller Management</h2>
+            <div class="seller-manager">
+                <!-- Seller management tools go here -->
+            </div>
+        </section>
+        <section id="tiend">
+            <h2>Tiend+</h2>
+            <div class="tiend-plus-features">
+                <!-- Tiend+ features go here -->
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Your Company</p>
+        <p>&copy; 2026 Mi Mercado Libre</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
